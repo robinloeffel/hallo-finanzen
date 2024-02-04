@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@graphql-codegen/cli": "^5.0.0",
 		"@graphql-codegen/typescript": "^4.0.1",
+		"@portabletext/svelte": "^2.1.5",
 		"@sanity/client": "^6.12.3",
 		"@sveltejs/adapter-vercel": "^5.1.0",
 		"@sveltejs/kit": "^2.0.0",
