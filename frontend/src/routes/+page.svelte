@@ -1,13 +1,16 @@
 <script>
   export let data;
 
-  const { pets } = data;
+  const { posts } = data;
 </script>
 
-{#if pets}
+<h1>what up man</h1>
+{#if posts}
   <ul>
-    {#each pets as pet}
-      <li>{pet.name}</li>
+    {#each posts as post}
+      <li>
+        <a href={`/posts/${post.slug.current}`}>{ post.title }</a>
+      </li>
     {/each}
   </ul>
 {/if}
