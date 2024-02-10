@@ -9,7 +9,9 @@ const config = {
 		adapter: adapter(),
 		typescript: {
 			config: tsConfig => merge(tsConfig, {
-				include: [ "../codegen.ts" ]
+				include: [
+					"../codegen.ts"
+				]
 			})
 		}
 	}

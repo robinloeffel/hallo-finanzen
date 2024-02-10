@@ -1,12 +1,20 @@
 <script lang="ts">
-  import { PortableText } from "@portabletext/svelte";
+	import { PortableText, type PortableTextComponents } from "@portabletext/svelte";
+	import { Image } from "$lib/sanity/portableTextComponents";
 
-  export let data;
+	export let data;
 
-  const { post } = data;
+	const { post } = data;
+
+	const components: PortableTextComponents = {
+		types: {
+			image: Image
+		}
+	};
 </script>
 
 <h1>{post.title}</h1>
-<PortableText value={post.body} />
+
+<PortableText value={post.body} {components} />
 
 <a href="/">go back</a>
