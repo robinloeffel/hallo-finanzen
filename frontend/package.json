@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "hallo-finanzen-frontend",
+	"name": "@hallo-finanzen/frontend",
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
@@ -8,12 +8,11 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"gql": "graphql-codegen"
+		"codegen": "sanity-codegen codegen"
 	},
 	"dependencies": {
-		"@graphql-codegen/cli": "^5.0.2",
-		"@graphql-codegen/typescript": "^4.0.4",
 		"@portabletext/svelte": "^2.1.5",
+		"@sanity-codegen/cli": "^1.0.0-alpha.45",
 		"@sanity/client": "^6.12.4",
 		"@sanity/image-url": "^1.0.2",
 		"@sveltejs/adapter-vercel": "^5.1.0",
@@ -23,8 +22,6 @@
 		"eslint-config-sweet": "^18.0.0",
 		"eslint-define-config": "^2.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"graphql": "^16.8.1",
-		"graphql-cli": "^4.1.0",
 		"sass": "^1.70.0",
 		"svelte": "^4.2.10",
 		"ts-deepmerge": "^7.0.0",

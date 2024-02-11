@@ -32,11 +32,5 @@ export default defineType({
 			title: "Bio",
 			type: "blockContent"
 		})
-	],
-	preview: {
-		select: {
-			title: "name",
-			media: "image"
-		}
-	}
+	]
 });

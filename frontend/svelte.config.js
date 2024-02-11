@@ -10,7 +10,7 @@ const config = {
 		typescript: {
 			config: tsConfig => merge(tsConfig, {
 				include: [
-					"../codegen.ts"
+					"../sanity-codegen.config.ts"
 				]
 			})
 		}

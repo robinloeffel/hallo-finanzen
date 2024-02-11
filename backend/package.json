@@ -1,13 +1,12 @@
 {
 	"private": true,
-	"name": "hallo-finanzen-backend",
+	"name": "@hallo-finanzen/backend",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "sanity dev",
 		"start": "sanity start",
 		"build": "sanity build",
-		"deploy": "sanity deploy",
-		"deploy-graphql": "sanity graphql deploy"
+		"deploy": "sanity deploy"
 	},
 	"dependencies": {
 		"@sanity/icons": "^2.10.2",
