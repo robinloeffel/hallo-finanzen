@@ -1,9 +1,9 @@
 import { merge } from "ts-deepmerge";
 import adapter from "@sveltejs/adapter-vercel";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from "svelte-define-config";
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default defineConfig({
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter(),
@@ -15,6 +15,4 @@ const config = {
 			})
 		}
 	}
-};
-
-export default config;
+});

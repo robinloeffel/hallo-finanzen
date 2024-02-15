@@ -5,8 +5,8 @@
 	export let portableText: CustomBlockComponentProps;
 
 	const url = sanityImage(portableText.value)
-		.width(300)
+		.size(300, 300)
 		.url();
 </script>
 
-<img class="portable-text-image" src={url} alt="" width="300" height="300">
+<img class="portable-text-image" alt="" height="300" src={url} width="300">

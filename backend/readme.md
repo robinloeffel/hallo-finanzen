@@ -1,3 +1,3 @@
-# `hallo-finanzen/backend`
+# `@hallo-finanzen/backend`
 
-> sentry schemas and plugins for [hallo-finanzen.ch](https://hallo-finanzen.ch)
+> sanity schemas and plugins for [hallo-finanzen.ch](https://hallo-finanzen.ch)

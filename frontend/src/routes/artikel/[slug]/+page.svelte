@@ -13,8 +13,12 @@
 	};
 </script>
 
+<svelte:head>
+	<title>{post?.title} &mdash; Hallo Finanzen!</title>
+</svelte:head>
+
 <h1>{post?.title}</h1>
 
-<PortableText value={post?.body} {components} />
+<PortableText {components} value={post?.body} />
 
 <a href="/">go back</a>

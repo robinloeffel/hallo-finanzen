@@ -1,18 +1,18 @@
 {
-	"private": true,
 	"name": "@hallo-finanzen/backend",
 	"version": "0.0.1",
+	"private": true,
 	"scripts": {
-		"dev": "sanity dev",
-		"start": "sanity start",
 		"build": "sanity build",
-		"deploy": "sanity deploy"
+		"deploy": "sanity deploy",
+		"dev": "sanity dev",
+		"start": "sanity start"
 	},
 	"dependencies": {
 		"@sanity/icons": "^2.10.2",
 		"@sanity/locale-de-de": "^1.1.0",
 		"@sanity/ui": "^2.0.2",
-		"@sanity/vision": "^3.28.0",
+		"@sanity/vision": "^3.29.1",
 		"@types/react": "^18.2.55",
 		"eslint": "^8.56.0",
 		"eslint-config-sweet": "^18.0.0",
@@ -20,7 +20,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-is": "^18.2.0",
-		"sanity": "^3.28.0",
+		"sanity": "^3.29.1",
 		"styled-components": "^6.1.8",
 		"typescript": "^5.3.3"
 	}
