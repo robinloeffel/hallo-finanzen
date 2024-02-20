@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { PortableText, type PortableTextComponents } from "@portabletext/svelte";
 	import { Image } from "$lib/sanity/portable-text";
+	import { ContentArea, Navigation, Richtext } from "$lib/components";
 
 	export let data;
 
@@ -17,8 +18,10 @@
 	<title>{post?.title} &mdash; Hallo Finanzen!</title>
 </svelte:head>
 
-<h1>{post?.title}</h1>
-
-<PortableText {components} value={post?.body} />
-
-<a href="/">go back</a>
+<Navigation />
+<ContentArea>
+	<Richtext>
+		<h1>{post?.title}</h1>
+		<PortableText {components} value={post?.body} />
+	</Richtext>
+</ContentArea>

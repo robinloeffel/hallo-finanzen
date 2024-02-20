@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { PageHero } from "$lib/components";
+	import {
+		PageHero,
+		ContentArea,
+		Navigation
+	} from "$lib/components";
 
 	export let data;
 
@@ -11,13 +15,16 @@
 </svelte:head>
 
 <PageHero />
+<Navigation />
 
-{#if posts.length > 0}
-	<ul>
-		{#each posts as post}
-			<li>
-				<a href={`/artikel/${post.slug.current}`}>{post.title}</a>
-			</li>
-		{/each}
-	</ul>
-{/if}
+<ContentArea>
+	{#if posts.length > 0}
+		<ul>
+			{#each posts as post}
+				<li>
+					<a href={`/artikel/${post.slug.current}`}>{post.title}</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
+</ContentArea>
