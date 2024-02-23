@@ -1,7 +1,6 @@
 import type { PageServerLoad } from "./$types";
-import { sanityClient } from "$lib/sanity";
+import { getPostBySlug } from "$lib/graphql";
 
-export const load: PageServerLoad = async({ params }) => {
-	const post = await sanityClient.getPostBySlug(params.slug);
-	return { post };
-};
+export const load: PageServerLoad = async({ params }) => ({
+	post: await getPostBySlug(params.slug)
+});

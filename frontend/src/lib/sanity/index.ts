@@ -1,2 +1,1 @@
-export { default as sanityClient, client } from "./client";
-export { default as sanityImage } from "./image";
+export { default as urlFor } from "./image";

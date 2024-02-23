@@ -22,7 +22,7 @@
 		<ul>
 			{#each posts as post}
 				<li>
-					<a href={`/artikel/${post.slug.current}`}>{post.title}</a>
+					<a href={`/artikel/${post.slug?.current}`}>{post.title}</a>
 				</li>
 			{/each}
 		</ul>

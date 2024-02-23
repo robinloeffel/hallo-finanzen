@@ -6,6 +6,7 @@
 		"build": "sanity build",
 		"deploy": "sanity deploy",
 		"dev": "sanity dev",
+		"graphql": "sanity graphql deploy",
 		"start": "sanity start"
 	},
 	"dependencies": {

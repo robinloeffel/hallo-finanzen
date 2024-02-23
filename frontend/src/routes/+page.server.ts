@@ -1,7 +1,6 @@
 import type { PageServerLoad } from "./$types";
-import { sanityClient } from "$lib/sanity";
+import { getAllPosts } from "$lib/graphql";
 
-export const load: PageServerLoad = async() => {
-	const posts = await sanityClient.getAllPosts();
-	return { posts };
-};
+export const load: PageServerLoad = async() => ({
+	posts: await getAllPosts()
+});
