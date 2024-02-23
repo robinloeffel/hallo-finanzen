@@ -9,18 +9,18 @@
 		"start": "sanity start"
 	},
 	"dependencies": {
-		"@sanity/icons": "^2.10.2",
+		"@sanity/icons": "^2.10.3",
 		"@sanity/locale-de-de": "^1.1.0",
-		"@sanity/ui": "^2.0.3",
-		"@sanity/vision": "^3.29.1",
-		"@types/react": "^18.2.57",
+		"@sanity/ui": "^2.0.7",
+		"@sanity/vision": "^3.30.0",
+		"@types/react": "^18.2.58",
 		"eslint": "^8.56.0",
 		"eslint-config-sweet": "^18.0.0",
 		"eslint-define-config": "^2.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-is": "^18.2.0",
-		"sanity": "^3.29.1",
+		"sanity": "^3.30.0",
 		"styled-components": "^6.1.8",
 		"typescript": "^5.3.3"
 	}
