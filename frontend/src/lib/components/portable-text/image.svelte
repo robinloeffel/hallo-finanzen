@@ -6,6 +6,7 @@
 
 	const source = urlFor(portableText.value)
 		.size(800, 600)
+		.auto("format")
 		.url();
 </script>
 

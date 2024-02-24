@@ -17,6 +17,7 @@
 
 	const imageUrl = urlFor(post?.image as SanityAsset)
 		.size(1280, 720)
+		.auto("format")
 		.url();
 </script>
 
@@ -40,5 +41,8 @@
 <style lang="scss">
 	.article-image {
 		width: 100%;
+		height: 80dvh;
+		object-fit: cover;
+		object-position: top center;
 	}
 </style>
