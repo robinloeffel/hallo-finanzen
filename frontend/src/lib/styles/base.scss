@@ -1,3 +1,5 @@
+@use "color-palette";
+
 #app {
 	display: contents;
 }
@@ -15,9 +17,9 @@ body {
 	font-family: "Inter Variable", system-ui, sans-serif;
 	font-size: 125%;
 	line-height: 1.6;
-	color: #111;
+	color: color-palette.$black-pearl;
 	text-wrap: balance;
-	background-color: #eee;
+	background-color: color-palette.$tame-white;
 	text-rendering: optimizelegibility;
 }
 
@@ -36,4 +38,8 @@ h3 {
 ul:not([class]),
 ol:not([class]) {
 	padding-left: 1em;
+}
+
+a {
+	color: inherit;
 }

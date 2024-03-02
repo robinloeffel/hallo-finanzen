@@ -1,4 +1,1 @@
-export {
-	getAllPosts,
-	getPostBySlug
-} from "./client";
+export { getAllPosts, getPostBySlug } from "./client";
