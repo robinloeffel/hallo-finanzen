@@ -3,7 +3,9 @@
 </div>
 
 <style lang="scss">
+	@use "$styles/spacing";
+
 	:global(.richtext > * + *) {
-		margin-top: 1em;
+		margin-top: spacing.$space-md;
 	}
 </style>

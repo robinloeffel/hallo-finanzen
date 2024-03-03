@@ -13,8 +13,12 @@ export const getAllPosts = async() => {
 	return data?.allPost ?? [];
 };
 
+export type AllPosts = Awaited<ReturnType<typeof getAllPosts>>;
+
 export const getPostBySlug = async(slug: string) => {
 	const query = getPostBySlugQuery(slug);
 	const { data } = await client.query(query, {});
 	return data?.allPost.at(0);
 };
+
+export type PostBySlug = Awaited<ReturnType<typeof getPostBySlug>>;

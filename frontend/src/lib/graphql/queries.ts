@@ -1,6 +1,6 @@
-import type { introspection } from "./types-generated";
 import type { PortableTextBlock } from "@portabletext/types";
 import { initGraphQLTada } from "gql.tada";
+import type { introspection } from "./types-generated";
 
 const graphql = initGraphQLTada<{
 	introspection: introspection;
@@ -26,6 +26,8 @@ export const getAllPostsQuery = () => graphql(`
 	query GetAllPosts {
 		allPost {
 			title
+			excerpt
+			publishedAt
 			slug {
 				current
 			}

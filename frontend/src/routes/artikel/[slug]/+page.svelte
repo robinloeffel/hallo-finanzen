@@ -21,7 +21,7 @@
 		.url();
 
 	const articleImageUrl = urlFor(post?.image as SanityAsset)
-		.size(1280, 720)
+		.size(2000, 1333)
 		.auto("format")
 		.url();
 </script>
@@ -31,17 +31,17 @@
 </svelte:head>
 
 <header>
-	<img class="article-image" alt="" height="720" src={articleImageUrl} width="1280" />
+	<img class="article-image" alt="" height="1333" src={articleImageUrl} width="2000" />
 </header>
 
 <ContentArea>
 	<Richtext>
 		<h1>{post?.title}</h1>
-		<p class="article-meta">
+		<small class="article-meta">
 			<img class="author-image" alt={post?.author?.name} height="30" src={authorImageUrl} width="30">
 			<a href={`/${post?.author?.slug?.current}`}>{post?.author?.name}</a>,
 			<span>{formatDate(post?.publishedAt ?? "")}</span>
-		</p>
+		</small>
 		<PortableText {components} value={post?.bodyRaw} />
 	</Richtext>
 </ContentArea>
@@ -55,7 +55,7 @@
 	}
 
 	.article-meta {
-		font-size: 0.9em;
+		display: block;
 	}
 
 	.author-image {

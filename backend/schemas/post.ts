@@ -1,4 +1,4 @@
-import { defineType, defineField } from "sanity";
+import { defineField, defineType } from "sanity";
 
 export default defineType({
 	name: "post",
@@ -39,6 +39,11 @@ export default defineType({
 			name: "publishedAt",
 			title: "Published at",
 			type: "datetime"
+		}),
+		defineField({
+			name: "excerpt",
+			title: "Excerpt",
+			type: "text"
 		}),
 		defineField({
 			name: "body",

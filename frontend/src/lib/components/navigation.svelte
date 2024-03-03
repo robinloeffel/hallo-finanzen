@@ -4,8 +4,15 @@
 	let shadow = false;
 	let hidden = false;
 	let oldScrollY = 0;
+	let spaceToTop = 0;
 
-	const observe: Action = () => {
+	const observe: Action = navigation => {
+		const computedStyle = window.getComputedStyle(navigation);
+		const height = Number.parseFloat(computedStyle.height);
+		const margin = Number.parseFloat(computedStyle.marginTop);
+
+		spaceToTop = height + margin * 2;
+
 		const io = new IntersectionObserver(entries => {
 			shadow = entries.at(0)?.isIntersecting ?? false;
 		}, { rootMargin: "0px 0px -100% 0px" });
@@ -20,7 +27,7 @@
 	};
 
 	const handleWindowScroll = () => {
-		hidden = shadow && window.scrollY > 150 && !(oldScrollY > window.scrollY);
+		hidden = shadow && window.scrollY > spaceToTop && !(oldScrollY > window.scrollY);
 		oldScrollY = window.scrollY;
 	};
 </script>
@@ -45,19 +52,23 @@
 </nav>
 
 <style lang="scss">
-	@use "$styles/color-palette";
 	@use "sass:color";
+	@use "$styles/color-palette";
+	@use "$styles/spacing";
+
+	$padding-x: 32px;
+	$padding-y: 28px;
 
 	.navigation {
 		position: sticky;
-		inset: 2em 0;
-		width: min(100% - 4em, 64ch + 64px);
-		padding: 28px 32px;
-		margin: 2em auto;
-		background-color: color.adjust(color-palette.$tame-white, $alpha: -0.25);
+		inset: spacing.$space-lg 0;
+		width: min(100% - spacing.$space-xl, spacing.$content-width + 2 * $padding-x);
+		padding: $padding-y $padding-x;
+		margin: spacing.$space-lg auto;
+		background-color: color-palette.$tame-white-75;
 		background-blend-mode: soft-light;
-		backdrop-filter: blur(1em);
-		border-radius: 1em;
+		backdrop-filter: blur(spacing.$space-md);
+		border-radius: spacing.$space-md;
 		transition: translate 0.4s ease-in-out;
 
 		&::after {
@@ -66,7 +77,7 @@
 			pointer-events: none;
 			content: "";
 			border-radius: inherit;
-			box-shadow: 0 0.5em 2em color.adjust(color-palette.$dreamless-sleep, $alpha: -0.9);
+			box-shadow: 0 spacing.$space-sm spacing.$space-md color-palette.$dreamless-sleep-10;
 			opacity: 0;
 			transition: opacity 0.3s ease-in-out;
 		}
@@ -82,7 +93,7 @@
 
 	.navigation-list {
 		display: flex;
-		gap: 1em;
+		gap: spacing.$space-md;
 		list-style: none;
 	}
 
