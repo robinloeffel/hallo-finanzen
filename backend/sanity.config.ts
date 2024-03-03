@@ -1,8 +1,8 @@
-import { defineConfig, isDev } from "sanity";
+import { defineConfig, isProd } from "sanity";
 import { visionTool } from "@sanity/vision";
 import { structureTool } from "sanity/structure";
 import { deDELocale } from "@sanity/locale-de-de";
-import { schemaTypes } from "./schemas";
+import { types } from "./schemas";
 
 export default defineConfig({
 	name: "hallo-finanzen",
@@ -12,9 +12,9 @@ export default defineConfig({
 	plugins: [
 		structureTool(),
 		visionTool(),
-		...isDev ? [] : [ deDELocale() ]
-	],
+		isProd && deDELocale()
+	].filter(Boolean),
 	schema: {
-		types: schemaTypes
+		types
 	}
 });
