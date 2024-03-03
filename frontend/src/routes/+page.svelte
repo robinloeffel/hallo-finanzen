@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { PageHero, ContentArea, Navigation } from "$components";
+	import { ContentArea, PageHero } from "$components";
 	import { urlFor } from "$sanity";
 
+	export const stickNav = true;
 	export let data;
 
 	const { posts } = data;
@@ -12,7 +13,6 @@
 </svelte:head>
 
 <PageHero />
-<Navigation />
 
 <ContentArea>
 	{#if posts.length > 0}

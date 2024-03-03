@@ -5,6 +5,6 @@
 <style lang="scss">
 	.content-area {
 		width: min(100% - 4em, 64ch);
-		margin: 2em auto;
+		margin: 4em auto;
 	}
 </style>

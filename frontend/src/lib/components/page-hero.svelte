@@ -9,7 +9,7 @@
 
 	.page-hero {
 		display: grid;
-		height: 75dvh;
+		height: 80dvh;
 		padding: 2em 3em;
 		color: color-palette.$tame-white;
 		background-color: color-palette.$black-pearl;
@@ -20,5 +20,9 @@
 		width: 75%;
 		font-size: 1.5em;
 		text-align: right;
+
+		a {
+			text-decoration-color: color-palette.$arctic-paradise;
+		}
 	}
 </style>

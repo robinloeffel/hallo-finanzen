@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { SanityAsset } from "@sanity/image-url/lib/types/types";
+	import { ContentArea, Richtext } from "$components";
+	import { Image } from "$components/portable-text";
+	import { formatDate, urlFor } from "$sanity";
 	import { PortableText, type PortableTextComponents } from "@portabletext/svelte";
-	import { urlFor, formatDate } from "$sanity";
-	import { Image } from "$lib/components/portable-text";
-	import { ContentArea, Navigation, Richtext } from "$lib/components";
+	import type { SanityAsset } from "@sanity/image-url/lib/types/types";
 
 	export let data;
 
@@ -33,8 +33,6 @@
 <header>
 	<img class="article-image" alt="" height="720" src={articleImageUrl} width="1280" />
 </header>
-
-<Navigation />
 
 <ContentArea>
 	<Richtext>

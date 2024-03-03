@@ -1,5 +1,5 @@
-import type { PageServerLoad } from "./$types";
 import { getAllPosts } from "$graphql";
+import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async() => ({
 	posts: await getAllPosts()

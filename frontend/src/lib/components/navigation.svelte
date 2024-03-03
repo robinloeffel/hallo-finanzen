@@ -1,20 +1,16 @@
 <script lang="ts">
 	import type { Action } from "svelte/action";
 
-	let sticking = false;
+	let shadow = false;
+	let hidden = false;
+	let oldScrollY = 0;
 
-	const observe: Action = navigation => {
-		const topMargin = window.getComputedStyle(navigation).marginTop;
-		const topRootMargin = Number.parseFloat(topMargin) + 1;
-
+	const observe: Action = () => {
 		const io = new IntersectionObserver(entries => {
-			sticking = !entries[0]?.isIntersecting;
-		}, {
-			rootMargin: `-${topRootMargin}px 0px 0px 0px`,
-			threshold: 1
-		});
+			shadow = entries.at(0)?.isIntersecting ?? false;
+		}, { rootMargin: "0px 0px -100% 0px" });
 
-		io.observe(navigation);
+		io.observe(document.body);
 
 		return {
 			destroy: () => {
@@ -22,9 +18,16 @@
 			}
 		};
 	};
+
+	const handleWindowScroll = () => {
+		hidden = shadow && window.scrollY > 150 && !(oldScrollY > window.scrollY);
+		oldScrollY = window.scrollY;
+	};
 </script>
 
-<nav class="navigation" class:sticking use:observe>
+<svelte:window on:scroll={handleWindowScroll} />
+
+<nav class="navigation" class:hidden class:shadow use:observe>
 	<ul class="navigation-list">
 		<li class="navigation-item">
 			<a class="navigation-link" href="/">Hallo, Finanzen!</a>
@@ -42,31 +45,37 @@
 </nav>
 
 <style lang="scss">
+	@use "$styles/color-palette";
 	@use "sass:color";
 
 	.navigation {
 		position: sticky;
-		top: 2em;
+		inset: 2em 0;
 		width: min(100% - 4em, 64ch + 64px);
 		padding: 28px 32px;
-		margin: 2em auto 0;
-		isolation: isolate;
+		margin: 2em auto;
+		background-color: color.adjust(color-palette.$tame-white, $alpha: -0.25);
+		background-blend-mode: soft-light;
+		backdrop-filter: blur(1em);
+		border-radius: 1em;
+		transition: translate 0.4s ease-in-out;
 
-		&::before {
+		&::after {
 			position: absolute;
 			inset: 0;
-			z-index: -1;
+			pointer-events: none;
 			content: "";
-			background-color: color.adjust(#eee, $alpha: -0.2);
-			backdrop-filter: blur(12px);
-			border: 1px solid #ddd;
-			border-radius: 24px;
-			box-shadow: 0 4px 8px color.adjust(#111, $alpha: -0.9);
+			border-radius: inherit;
+			box-shadow: 0 0.5em 2em color.adjust(color-palette.$dreamless-sleep, $alpha: -0.9);
 			opacity: 0;
-			transition: opacity 0.4s ease-in-out;
+			transition: opacity 0.3s ease-in-out;
 		}
 
-		&.sticking::before {
+		&.hidden {
+			translate: 0 -200%;
+		}
+
+		&.shadow::after {
 			opacity: 1;
 		}
 	}

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { CustomBlockComponentProps } from "@portabletext/svelte";
 	import { urlFor } from "$sanity";
+	import type { CustomBlockComponentProps } from "@portabletext/svelte";
 
 	export let portableText: CustomBlockComponentProps;
 

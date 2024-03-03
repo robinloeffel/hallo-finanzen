@@ -1,6 +1,9 @@
 <script lang="ts">
-	import "@fontsource-variable/inter";
 	import "$styles/base.scss";
+	import "@fontsource-variable/inter";
+
+	import { Navigation } from "$components";
 </script>
 
+<Navigation />
 <slot/>
