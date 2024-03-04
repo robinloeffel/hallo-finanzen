@@ -13,7 +13,7 @@
 </script>
 
 <a class="article" class:even href={`/artikel/${post.slug?.current}`}>
-	<img class="article-image" alt="" height="750" src={imageUrl} width="1000" />
+	<img class="article-image" alt="" decoding="async" height="750" loading="lazy" src={imageUrl} width="1000" />
 	<div class="article-info">
 		<small class="article-date">{formatDate(post.publishedAt ?? "")}</small>
 		<h2 class="article-title">{post.title}</h2>

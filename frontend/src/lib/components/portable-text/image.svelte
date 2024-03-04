@@ -10,4 +10,4 @@
 		.url();
 </script>
 
-<img class="image" alt="" height="1000" src={source} width="1500" />
+<img class="image" alt="" decoding="async" height="1000" loading="lazy" src={source} width="1500" />

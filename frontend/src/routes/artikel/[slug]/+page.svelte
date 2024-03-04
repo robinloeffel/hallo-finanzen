@@ -24,14 +24,14 @@
 </svelte:head>
 
 <header>
-	<img class="article-image" alt="" height="1333" src={articleImageUrl} width="2000" />
+	<img class="article-image" alt="" decoding="async" height="1333" src={articleImageUrl} width="2000" />
 </header>
 
 <ContentArea>
 	<Richtext>
 		<h1>{post?.title}</h1>
 		<small class="article-meta">
-			<img class="author-image" alt={post?.author?.name} height="30" src={authorImageUrl} width="30">
+			<img class="author-image" alt={post?.author?.name} decoding="async" height="30" loading="lazy" src={authorImageUrl} width="30">
 			<a href={`/${post?.author?.slug?.current}`}>{post?.author?.name}</a>,
 			<span>{formatDate(post?.publishedAt ?? "")}</span>
 		</small>
