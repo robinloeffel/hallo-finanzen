@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Navigation } from "$components";
 	import "$styles/base.scss";
-	import "@fontsource-variable/inter";
 
 	export let data;
 
