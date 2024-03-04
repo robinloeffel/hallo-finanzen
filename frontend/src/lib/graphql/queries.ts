@@ -67,3 +67,35 @@ export const getPostBySlugQuery = (slug: string) => graphql(`
 		}
 	}
 `, [ ImageFragment ]);
+
+export const getAllPagesQuery = () => graphql(`
+	query GetAllPages {
+		allPage {
+			title
+			inNavigation
+			slug {
+				current
+			}
+		}
+	}
+`);
+
+export const getPageBySlugQuery = (slug: string) => graphql(`
+	query GetPageBySlug {
+		allPage(
+			where: {
+				slug: {
+					current: {
+						eq: "${slug}"
+					}
+				}
+			}
+		) {
+			title
+			bodyRaw,
+			image {
+				...ImageFragment
+			}
+		}
+	}
+`, [ ImageFragment ]);

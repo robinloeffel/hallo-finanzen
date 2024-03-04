@@ -1,5 +1,8 @@
 <script lang="ts">
+	import type { AllPages } from "$graphql";
 	import type { Action } from "svelte/action";
+
+	export let pages: AllPages;
 
 	let shadow = false;
 	let hidden = false;
@@ -40,14 +43,13 @@
 			<a class="navigation-link" href="/">Hallo, Finanzen!</a>
 		</li>
 		<li class="navigation-item">
-			<a class="navigation-link" href="/archiv">Archiv</a>
+			<a class="navigation-link" href="/artikel">Archiv</a>
 		</li>
-		<li class="navigation-item">
-			<a class="navigation-link" href="/empfehlungen">Empfehlungen</a>
-		</li>
-		<li class="navigation-item">
-			<a class="navigation-link" href="/ueber-mich">Über mich</a>
-		</li>
+		{#each pages as page}
+			<li class="navigation-item">
+				<a class="navigation-link" href={`/${page.slug?.current}`}>{page.title}</a>
+			</li>
+		{/each}
 	</ul>
 </nav>
 

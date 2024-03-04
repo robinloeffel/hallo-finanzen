@@ -4,9 +4,8 @@
 	"private": true,
 	"scripts": {
 		"build": "sanity build",
-		"deploy": "sanity deploy",
+		"deploy": "sanity deploy && sanity graphql deploy",
 		"dev": "sanity dev",
-		"graphql": "sanity graphql deploy",
 		"start": "sanity start"
 	},
 	"dependencies": {

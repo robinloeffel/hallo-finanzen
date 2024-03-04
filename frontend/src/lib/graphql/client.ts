@@ -1,6 +1,11 @@
 import { PUBLIC_GRAPHQL_API } from "$env/static/public";
 import { Client, cacheExchange, fetchExchange } from "@urql/core";
-import { getAllPostsQuery, getPostBySlugQuery } from "./queries";
+import {
+	getAllPagesQuery,
+	getAllPostsQuery,
+	getPageBySlugQuery,
+	getPostBySlugQuery
+} from "./queries";
 
 const client = new Client({
 	url: PUBLIC_GRAPHQL_API,
@@ -22,3 +27,19 @@ export const getPostBySlug = async(slug: string) => {
 };
 
 export type PostBySlug = Awaited<ReturnType<typeof getPostBySlug>>;
+
+export const getAllPages = async() => {
+	const query = getAllPagesQuery();
+	const { data } = await client.query(query, {});
+	return data?.allPage ?? [];
+};
+
+export type AllPages = Awaited<ReturnType<typeof getAllPages>>;
+
+export const getPageBySlug = async(slug: string) => {
+	const query = getPageBySlugQuery(slug);
+	const { data } = await client.query(query, {});
+	return data?.allPage.at(0);
+};
+
+export type PageBySlug = Awaited<ReturnType<typeof getPageBySlug>>;

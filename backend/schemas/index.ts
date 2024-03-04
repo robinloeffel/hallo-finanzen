@@ -1,9 +1,11 @@
-import post from "./post";
 import author from "./author";
 import blockContent from "./block-content";
+import page from "./page";
+import post from "./post";
 
 export const types = [
-	post,
 	author,
-	blockContent
+	blockContent,
+	page,
+	post
 ];

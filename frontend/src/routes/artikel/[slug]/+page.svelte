@@ -1,19 +1,12 @@
 <script lang="ts">
 	import { ContentArea, Richtext } from "$components";
-	import { Image } from "$components/portable-text";
+	import { Body } from "$components/portable-text";
 	import { formatDate, urlFor } from "$sanity";
-	import { PortableText, type PortableTextComponents } from "@portabletext/svelte";
 	import type { SanityAsset } from "@sanity/image-url/lib/types/types";
 
 	export let data;
 
 	const { post } = data;
-
-	const components: PortableTextComponents = {
-		types: {
-			image: Image
-		}
-	};
 
 	const authorImageUrl = urlFor(post?.author?.image as SanityAsset)
 		.size(64, 64)
@@ -42,7 +35,7 @@
 			<a href={`/${post?.author?.slug?.current}`}>{post?.author?.name}</a>,
 			<span>{formatDate(post?.publishedAt ?? "")}</span>
 		</small>
-		<PortableText {components} value={post?.bodyRaw} />
+		<Body value={post?.bodyRaw} />
 	</Richtext>
 </ContentArea>
 

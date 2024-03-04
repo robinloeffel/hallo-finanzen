@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArticleList, ContentArea, PageHero } from "$components";
+	import { ArticleList, ContentArea, Richtext } from "$components";
 
 	export let data;
 
@@ -7,12 +7,14 @@
 </script>
 
 <svelte:head>
-	<title>Hallo, Finanzen!</title>
+	<title>Alle Artikel &mdash; Hallo, Finanzen!</title>
 </svelte:head>
 
-<PageHero />
-
 <ContentArea>
+	<Richtext>
+		<h1>Alle Artikel</h1>
+	</Richtext>
+
 	{#if posts.length > 0}
 		<ArticleList {posts} />
 	{/if}
