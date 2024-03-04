@@ -40,11 +40,14 @@
 </ContentArea>
 
 <style lang="scss">
+	@use "$styles/spacing";
+
 	.article-image {
-		width: 100%;
-		height: 80dvh;
+		width: calc(100dvw - 2 * spacing.$space-lg);
+		height: calc(100dvh - spacing.$space-lg);
+		margin: 0 spacing.$space-lg spacing.$space-lg;
 		object-fit: cover;
-		object-position: top center;
+		border-radius: 0 0 spacing.$space-md spacing.$space-md;
 	}
 
 	.article-meta {

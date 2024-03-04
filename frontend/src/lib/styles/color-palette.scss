@@ -7,7 +7,8 @@ $curious-blue: rgb(50 130 184);
 $dreamless-sleep: rgb(17 17 17);
 $seashell-cove: rgb(15 76 117);
 $tame-white: rgb(240 240 240);
+$super-white: rgb(255 255 255);
 
 // alpha modified
 $dreamless-sleep-10: color.adjust($dreamless-sleep, $alpha: -0.9);
-$tame-white-75: color.adjust($tame-white, $alpha: -0.25);
+$super-white-80: color.adjust($super-white, $alpha: -0.2);

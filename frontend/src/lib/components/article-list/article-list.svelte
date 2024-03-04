@@ -17,10 +17,8 @@
 	@use "$styles/spacing";
 
 	.article-list {
+		display: grid;
+		gap: spacing.$space-lg;
 		list-style: none;
-	}
-
-	.article-list-item + .article-list-item {
-		margin-top: spacing.$space-lg;
 	}
 </style>
