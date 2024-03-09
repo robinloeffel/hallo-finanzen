@@ -1,2 +1,2 @@
-export { default as Body } from "./body.svelte";
-export { default as Image } from "./image.svelte";
+export { default as Body } from "./body/body.svelte";
+export { default as Image } from "./image/image.svelte";

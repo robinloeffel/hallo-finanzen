@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navigation } from "$components";
+	import { Footer, Navigation } from "$components";
 	import "$styles/base.scss";
 
 	export let data;
@@ -11,3 +11,4 @@
 
 <Navigation pages={navigationItems}/>
 <slot/>
+<Footer {pages}/>
