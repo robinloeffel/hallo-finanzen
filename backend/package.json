@@ -12,18 +12,18 @@
 		"@sanity/icons": "^2.10.3",
 		"@sanity/locale-de-de": "^1.1.2",
 		"@sanity/ui": "^2.0.7",
-		"@sanity/vision": "^3.30.1",
+		"@sanity/vision": "^3.32.0",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@tsconfig/strictest": "^2.0.3",
-		"@types/react": "^18.2.61",
+		"@types/react": "^18.2.64",
 		"eslint": "^8.57.0",
-		"eslint-config-sweet": "^18.0.0",
+		"eslint-config-sweet": "^19.0.2",
 		"eslint-define-config": "^2.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-is": "^18.2.0",
-		"sanity": "^3.30.1",
+		"sanity": "^3.32.0",
 		"styled-components": "^6.1.8",
-		"typescript": "^5.3.3"
+		"typescript": "^5.4.2"
 	}
 }
