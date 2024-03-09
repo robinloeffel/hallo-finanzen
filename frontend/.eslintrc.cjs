@@ -36,6 +36,6 @@ module.exports = defineConfig({
 		}
 	}],
 	ignorePatterns: [
-		"types.d.ts"
+		"*-generated.d.ts"
 	]
 });

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Image } from "$components/portable-text";
 	import { PortableText, type PortableTextComponents } from "@portabletext/svelte";
-	import { type PortableTextBlock } from "@portabletext/types";
+	import type { PortableTextBlock } from "@portabletext/types";
 
 	export let value: PortableTextBlock | null | undefined;
 

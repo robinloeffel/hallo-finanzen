@@ -24,7 +24,15 @@
 </svelte:head>
 
 <header>
-	<img class="article-image" alt="" decoding="async" height="1333" src={articleImageUrl} width="2000" />
+	<img
+		class="article-image"
+		alt=""
+		decoding="async"
+		fetchpriority="high"
+		height="1333"
+		src={articleImageUrl}
+		width="2000"
+	/>
 </header>
 
 <ContentArea>

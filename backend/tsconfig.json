@@ -5,7 +5,6 @@
 		"module": "esnext",
 		"moduleResolution": "node",
 		"moduleDetection": "force",
-		"lib": ["dom", "dom.iterable", "esnext"],
 		"noPropertyAccessFromIndexSignature": false,
 		"verbatimModuleSyntax": true,
 		"noEmit": true
