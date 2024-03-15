@@ -18,9 +18,9 @@ body {
 	font-family: "Inter Variable", system-ui, sans-serif;
 	font-size: 125%;
 	line-height: 1.6;
-	color: color-palette.$black-pearl;
+	color: color-palette.$tame-white;
 	text-wrap: balance;
-	background-color: color-palette.$tame-white;
+	background-color: color-palette.$black-pearl;
 	text-rendering: optimizelegibility;
 }
 
@@ -44,5 +44,5 @@ ol:not([class]) {
 
 a {
 	color: inherit;
-	text-decoration-color: color-palette.$seashell-cove;
+	text-decoration-color: color-palette.$curious-blue;
 }

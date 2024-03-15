@@ -31,8 +31,6 @@
 		grid-template-columns: 5fr 4fr;
 		overflow: clip;
 		text-decoration: none;
-		background-color: color-palette.$super-white;
-		border-radius: spacing.$space-md;
 
 		&.even {
 			grid-template-columns: 4fr 5fr;
@@ -40,7 +38,8 @@
 	}
 
 	.article-media {
-		overflow: clip;
+		overflow: hidden;
+		border-radius: spacing.$space-md;
 
 		.even & {
 			order: 1;
@@ -70,7 +69,7 @@
 
 		.article:hover &,
 		.article:focus-visible & {
-			text-decoration-color: color-palette.$seashell-cove;
+			text-decoration-color: color-palette.$curious-blue;
 		}
 	}
 </style>

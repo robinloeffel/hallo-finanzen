@@ -39,13 +39,13 @@
 	$padding-y: 28px;
 
 	.navigation {
-		position: fixed;
+		position: sticky;
 		inset: spacing.$space-lg 0 auto;
 		z-index: 1;
 		width: min(100% - spacing.$space-xl, spacing.$content-width + 2 * $padding-x);
 		padding: $padding-y $padding-x;
-		margin: auto;
-		background-color: color-palette.$super-white-80;
+		margin: spacing.$space-lg auto;
+		background-color: color-palette.$black-pearl-80;
 		background-blend-mode: soft-light;
 		backdrop-filter: blur(spacing.$space-md);
 		border-radius: spacing.$space-md;

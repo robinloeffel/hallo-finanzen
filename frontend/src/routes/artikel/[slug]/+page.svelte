@@ -52,10 +52,10 @@
 
 	.article-image {
 		width: calc(100dvw - 2 * spacing.$space-lg);
-		height: calc(100dvh - spacing.$space-lg);
+		height: 80dvh;
 		margin: 0 spacing.$space-lg spacing.$space-lg;
 		object-fit: cover;
-		border-radius: 0 0 spacing.$space-md spacing.$space-md;
+		border-radius: spacing.$space-md;
 	}
 
 	.article-meta {
