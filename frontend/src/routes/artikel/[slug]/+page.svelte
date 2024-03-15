@@ -52,7 +52,7 @@
 
 	.article-image {
 		width: calc(100dvw - 2 * spacing.$space-lg);
-		height: 80dvh;
+		height: calc(100dvh - 5 * spacing.$space-lg);
 		margin: 0 spacing.$space-lg spacing.$space-lg;
 		object-fit: cover;
 		border-radius: spacing.$space-md;

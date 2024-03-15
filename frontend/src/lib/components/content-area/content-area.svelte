@@ -7,6 +7,6 @@
 
 	.content-area {
 		width: min(100% - spacing.$space-xl, spacing.$content-width);
-		margin: spacing.$space-xl auto;
+		margin: spacing.$space-xl auto 1.5 * spacing.$space-xl;
 	}
 </style>
