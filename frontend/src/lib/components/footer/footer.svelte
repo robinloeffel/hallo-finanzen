@@ -1,25 +1,48 @@
 <script lang="ts">
-	import { page } from "$app/stores";
-	import type { AllPages } from "$graphql";
+	import { type AllPages } from "$graphql";
 
 	export let pages: AllPages;
-
-	$: breadcrumbs = $page.url.pathname.split("/").filter(Boolean);
 </script>
 
 <footer class="footer">
-	<div class="breadcrumbs">
-		{#each breadcrumbs as crumb, index}
-			{crumb} {index}
+	<ul class="sitemap">
+		<li class="sitemap-item">
+			<a href="/">Home</a>
+		</li>
+		<li class="sitemap-item">
+			<a href="/artikel">Archiv</a>
+		</li>
+		{#each pages as page}
+			<li class="sitemap-item">
+				<a href={`/${page.slug?.current}`}>{page.title}</a>
+			</li>
 		{/each}
-	</div>
-	<pre>{JSON.stringify(pages, null, 2)}</pre>
-	<pre>{JSON.stringify(breadcrumbs, null, 2)}</pre>
+	</ul>
+	<small>© Hallo, Finanzen! 2024</small>
 </footer>
 
 <style lang="scss">
+	@use "$styles/spacing";
+
 	.footer {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		gap: spacing.$space-md;
+		place-items: center;
+		width: min(100%, spacing.$content-width);
+		margin: 0 auto spacing.$space-lg;
+	}
+
+	.sitemap {
+		display: flex;
+		list-style: none;
+	}
+
+	.sitemap-item {
+		display: inline-flex;
+
+		&:not(:last-child)::after {
+			margin: 0 spacing.$space-sm;
+			content: "—";
+		}
 	}
 </style>

@@ -92,7 +92,10 @@ export const getPageBySlugQuery = (slug: string) => graphql(`
 			}
 		) {
 			title
-			bodyRaw,
+			bodyRaw
+			slug {
+				current
+			}
 			image {
 				...ImageFragment
 			}

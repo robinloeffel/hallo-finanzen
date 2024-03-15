@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArticleList, ContentArea, Richtext } from "$components";
+	import { ArticleList, ContentArea } from "$components";
 
 	export let data;
 
@@ -11,10 +11,6 @@
 </svelte:head>
 
 <ContentArea>
-	<Richtext>
-		<h1>Alle Artikel</h1>
-	</Richtext>
-
 	{#if posts.length > 0}
 		<ArticleList {posts} />
 	{/if}
