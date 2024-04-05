@@ -9,21 +9,21 @@
 		"start": "sanity start"
 	},
 	"dependencies": {
-		"@sanity/icons": "^2.11.2",
-		"@sanity/locale-de-de": "^1.1.2",
-		"@sanity/ui": "^2.0.10",
-		"@sanity/vision": "^3.34.0",
+		"@sanity/icons": "^2.11.6",
+		"@sanity/locale-de-de": "^1.1.3",
+		"@sanity/ui": "^2.0.14",
+		"@sanity/vision": "^3.36.4",
 		"@total-typescript/ts-reset": "^0.5.1",
-		"@tsconfig/strictest": "^2.0.3",
-		"@types/react": "^18.2.66",
+		"@tsconfig/strictest": "^2.0.5",
+		"@types/react": "^18.2.74",
 		"eslint": "^8.57.0",
 		"eslint-config-sweet": "^19.0.2",
 		"eslint-define-config": "^2.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-is": "^18.2.0",
-		"sanity": "^3.34.0",
+		"sanity": "^3.36.4",
 		"styled-components": "^6.1.8",
-		"typescript": "^5.4.2"
+		"typescript": "^5.4.4"
 	}
 }
