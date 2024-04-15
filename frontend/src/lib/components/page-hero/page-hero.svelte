@@ -6,16 +6,18 @@
 
 <style lang="scss">
 	@use "$styles/color-palette";
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
+	@use "$styles/type-scale";
+	@use "$styles/variables";
 
 	.page-hero {
 		display: grid;
 		place-items: center;
-		width: min(100%, spacing.$content-width);
-		margin: 1.5 * spacing.$space-xl auto 2 * spacing.$space-xl;
+		width: min(100%, variables.$content-width);
+		margin: space-scale.$size-96 auto space-scale.$size-128;
 	}
 
 	.page-hero-text {
-		font-size: 1.5em;
+		font-size: type-scale.$size-30;
 	}
 </style>

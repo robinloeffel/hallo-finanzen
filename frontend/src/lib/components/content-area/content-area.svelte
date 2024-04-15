@@ -3,10 +3,11 @@
 </main>
 
 <style lang="scss">
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
+	@use "$styles/variables";
 
 	.content-area {
-		width: min(100% - spacing.$space-xl, spacing.$content-width);
-		margin: spacing.$space-xl auto 1.5 * spacing.$space-xl;
+		width: min(100% - space-scale.$size-64, variables.$content-width);
+		margin: space-scale.$size-64 auto space-scale.$size-96;
 	}
 </style>

@@ -48,14 +48,14 @@
 </ContentArea>
 
 <style lang="scss">
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
 
 	.article-image {
-		width: calc(100dvw - 2 * spacing.$space-lg);
-		height: calc(100dvh - 5 * spacing.$space-lg);
-		margin: 0 spacing.$space-lg spacing.$space-lg;
+		width: calc(100dvw - space-scale.$size-64);
+		height: calc(100dvh - space-scale.$size-192);
+		margin: 0 space-scale.$size-32 space-scale.$size-32;
 		object-fit: cover;
-		border-radius: spacing.$space-md;
+		border-radius: space-scale.$size-16;
 	}
 
 	.article-meta {

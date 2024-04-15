@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type AllPages } from "$graphql";
+	import type { AllPages } from "$graphql";
 
 	export let pages: AllPages;
 </script>
@@ -22,18 +22,21 @@
 </footer>
 
 <style lang="scss">
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
+	@use "$styles/variables";
 
 	.footer {
 		display: grid;
-		gap: spacing.$space-md;
+		gap: space-scale.$size-16;
 		place-items: center;
-		width: min(100%, spacing.$content-width);
-		margin: 0 auto spacing.$space-lg;
+		width: min(100% - space-scale.$size-64, variables.$content-width);
+		margin: 0 auto space-scale.$size-32;
 	}
 
 	.sitemap {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		list-style: none;
 	}
 
@@ -41,7 +44,7 @@
 		display: inline-flex;
 
 		&:not(:last-child)::after {
-			margin: 0 spacing.$space-sm;
+			margin: 0 space-scale.$size-8;
 			content: "—";
 		}
 	}

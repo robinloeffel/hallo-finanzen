@@ -1,5 +1,7 @@
 @forward "font-face";
 @use "color-palette";
+@use "space-scale";
+@use "type-scale";
 
 #app {
 	display: contents;
@@ -11,12 +13,12 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	outline-offset: 10px;
+	outline-offset: space-scale.$size-8;
 }
 
 body {
 	font-family: "Inter Variable", system-ui, sans-serif;
-	font-size: 125%;
+	font-size: type-scale.$size-20;
 	line-height: 1.6;
 	color: color-palette.$tame-white;
 	text-wrap: balance;
@@ -39,7 +41,7 @@ h3 {
 
 ul:not([class]),
 ol:not([class]) {
-	padding-left: 1em;
+	padding-left: space-scale.$size-16;
 }
 
 a {

@@ -13,9 +13,9 @@
 <svelte:head>
 	{#if !dev}
 		<script
-			async
 			data-domains="hallo-finanzen.ch"
 			data-website-id="24486b1e-aa24-4dd4-8878-6282b9d83c25"
+			defer
 			src="/stats/script.js"
 		></script>
 	{/if}

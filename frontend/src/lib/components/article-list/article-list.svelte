@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type AllPosts } from "$graphql";
+	import type { AllPosts } from "$graphql";
 	import Article from "./article.svelte";
 
 	export let posts: AllPosts = [];
@@ -14,11 +14,11 @@
 </ul>
 
 <style lang="scss">
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
 
 	.article-list {
 		display: grid;
-		gap: spacing.$space-lg;
+		gap: space-scale.$size-48;
 		list-style: none;
 	}
 </style>

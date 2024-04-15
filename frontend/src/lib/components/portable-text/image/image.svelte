@@ -21,9 +21,9 @@
 />
 
 <style lang="scss">
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
 
 	.image {
-		border-radius: spacing.$space-md;
+		border-radius: space-scale.$size-16;
 	}
 </style>

@@ -1,4 +1,4 @@
-import type { PortableTextBlock } from "@portabletext/types";
+import type { InputValue } from "@portabletext/svelte";
 import { initGraphQLTada } from "gql.tada";
 import type { introspection } from "./types-generated";
 
@@ -6,7 +6,7 @@ const graphql = initGraphQLTada<{
 	introspection: introspection;
 	scalars: {
 		DateTime: string;
-		JSON: PortableTextBlock;
+		JSON: InputValue;
 	};
 }>();
 

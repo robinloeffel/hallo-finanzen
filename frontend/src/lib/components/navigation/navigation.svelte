@@ -31,24 +31,21 @@
 </nav>
 
 <style lang="scss">
-	@use "sass:color";
 	@use "$styles/color-palette";
-	@use "$styles/spacing";
-
-	$padding-x: 32px;
-	$padding-y: 28px;
+	@use "$styles/space-scale";
+	@use "$styles/variables";
 
 	.navigation {
 		position: sticky;
-		inset: spacing.$space-lg 0 auto;
+		inset: space-scale.$size-32 0 auto;
 		z-index: 1;
-		width: min(100% - spacing.$space-xl, spacing.$content-width + 2 * $padding-x);
-		padding: $padding-y $padding-x;
-		margin: spacing.$space-lg auto;
+		width: min(100% - space-scale.$size-64, variables.$content-width + space-scale.$size-64);
+		padding: space-scale.$size-24 space-scale.$size-32;
+		margin: space-scale.$size-32 auto;
 		background-color: color-palette.$black-pearl-80;
 		background-blend-mode: soft-light;
-		backdrop-filter: blur(spacing.$space-md);
-		border-radius: spacing.$space-md;
+		backdrop-filter: blur(space-scale.$size-16);
+		border-radius: space-scale.$size-16;
 		transition: translate 0.4s ease-in-out;
 
 		&.hidden {
@@ -58,7 +55,7 @@
 
 	.navigation-list {
 		display: flex;
-		gap: spacing.$space-md;
+		gap: space-scale.$size-16;
 		list-style: none;
 	}
 

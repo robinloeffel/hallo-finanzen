@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type AllPosts } from "$graphql";
+	import type { AllPosts } from "$graphql";
 	import { formatDate, urlFor } from "$sanity";
 	import type { SanityAsset } from "@sanity/image-url/lib/types/types";
 
@@ -24,7 +24,7 @@
 
 <style lang="scss">
 	@use "$styles/color-palette";
-	@use "$styles/spacing";
+	@use "$styles/space-scale";
 
 	.article {
 		display: grid;
@@ -39,7 +39,7 @@
 
 	.article-media {
 		overflow: hidden;
-		border-radius: spacing.$space-md;
+		border-radius: space-scale.$size-16;
 
 		.even & {
 			order: 1;
@@ -57,9 +57,9 @@
 
 	.article-info {
 		display: grid;
-		gap: spacing.$space-sm;
+		gap: space-scale.$size-8;
 		align-self: end;
-		padding: spacing.$space-lg * 0.75 spacing.$space-lg;
+		padding: space-scale.$size-24 space-scale.$size-32;
 	}
 
 	.article-title {
