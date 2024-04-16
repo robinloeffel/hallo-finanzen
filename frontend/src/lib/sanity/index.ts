@@ -1,2 +1,2 @@
-export { default as formatDate } from "./format-date";
-export { default as urlFor } from "./image";
+export { formatDate } from "./format-date";
+export { urlFor } from "./image";

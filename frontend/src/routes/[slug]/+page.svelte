@@ -13,6 +13,6 @@
 
 <ContentArea>
 	<Richtext>
-		<Body value={page?.bodyRaw} />
+		<Body value={page?.body} />
 	</Richtext>
 </ContentArea>

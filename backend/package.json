@@ -4,26 +4,33 @@
 	"private": true,
 	"scripts": {
 		"build": "sanity build",
-		"deploy": "sanity deploy && sanity graphql deploy",
+		"deploy": "sanity deploy",
 		"dev": "sanity dev",
-		"start": "sanity start"
+		"se": "sanity schema extract --enforce-required-fields",
+		"se:w": "chokidar 'schemas/**/*.ts' -c 'npm run se' --initial",
+		"start": "sanity start",
+		"tg": "sanity typegen generate",
+		"tg:w": "chokidar '../frontend/src/lib/sanity/queries.ts' -c 'npm run tg' --initial",
+		"watch": "concurrently npm:*:w"
 	},
 	"dependencies": {
-		"@sanity/icons": "^2.11.6",
+		"@sanity/icons": "^2.11.8",
 		"@sanity/locale-de-de": "^1.1.3",
-		"@sanity/ui": "^2.0.14",
-		"@sanity/vision": "^3.36.4",
+		"@sanity/ui": "^2.1.3",
+		"@sanity/vision": "^3.38.0",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@tsconfig/strictest": "^2.0.5",
-		"@types/react": "^18.2.74",
+		"@types/react": "^18.2.79",
+		"chokidar-cli": "^3.0.0",
+		"concurrently": "^8.2.2",
 		"eslint": "^8.57.0",
-		"eslint-config-sweet": "^19.0.2",
+		"eslint-config-sweet": "^20.0.0",
 		"eslint-define-config": "^2.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-is": "^18.2.0",
-		"sanity": "^3.36.4",
+		"sanity": "^3.38.0",
 		"styled-components": "^6.1.8",
-		"typescript": "^5.4.4"
+		"typescript": "^5.4.5"
 	}
 }

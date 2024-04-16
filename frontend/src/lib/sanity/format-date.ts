@@ -1,4 +1,4 @@
-export default (
+export const formatDate = (
 	dateTime: string
 ) => new Intl.DateTimeFormat("de-CH", {
 	day: "numeric",

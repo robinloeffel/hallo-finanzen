@@ -1,4 +1,4 @@
-import { getPostBySlug } from "$graphql";
+import { getPostBySlug } from "$sanity/client";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async({ params }) => ({

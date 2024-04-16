@@ -1,7 +1,7 @@
-import { defineConfig, isProd } from "sanity";
-import { visionTool } from "@sanity/vision";
-import { structureTool } from "sanity/structure";
 import { deDELocale } from "@sanity/locale-de-de";
+import { visionTool } from "@sanity/vision";
+import { defineConfig, isProd } from "sanity";
+import { structureTool } from "sanity/structure";
 import { types } from "./schemas";
 
 export default defineConfig({

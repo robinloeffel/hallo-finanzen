@@ -1,12 +1,11 @@
 <script lang="ts">
-	import type { AllPosts } from "$graphql";
 	import { formatDate, urlFor } from "$sanity";
-	import type { SanityAsset } from "@sanity/image-url/lib/types/types";
+	import type { GetAllPostsQueryResult } from "$sanity/client";
 
-	export let post: AllPosts[number];
+	export let post: GetAllPostsQueryResult[number];
 	export let even: boolean;
 
-	const imageUrl = urlFor(post.image as SanityAsset)
+	const imageUrl = urlFor(post.image!)
 		.size(1000, 750)
 		.auto("format")
 		.url();

@@ -1,10 +1,8 @@
-import { PUBLIC_SANITY_PROJECT_ID } from "$env/static/public";
 import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { client } from "./client";
 
-const builder = imageUrlBuilder({
-	projectId: PUBLIC_SANITY_PROJECT_ID,
-	dataset: "production"
-});
+const builder = imageUrlBuilder(client);
 
-export default (source: SanityImageSource) => builder.image(source);
+export const urlFor = (
+	source: Parameters<typeof builder.image>[0]
+) => builder.image(source);

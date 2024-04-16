@@ -5,11 +5,6 @@
 		"moduleDetection": "force",
 		"forceConsistentCasingInFileNames": true,
 		"noUncheckedIndexedAccess": true,
-		"skipLibCheck": true,
-		"plugins": [{
-			"name": "@0no-co/graphqlsp",
-			"schema": "https://iwgytvvq.api.sanity.io/v2023-08-01/graphql/production/default",
-			"tadaOutputLocation": "./src/lib/graphql/types-generated.d.ts"
-		}]
+		"skipLibCheck": true
 	}
 }

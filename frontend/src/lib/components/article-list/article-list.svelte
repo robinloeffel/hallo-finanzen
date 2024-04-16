@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { AllPosts } from "$graphql";
+	import type { GetAllPostsQueryResult } from "$sanity/client";
 	import Article from "./article.svelte";
 
-	export let posts: AllPosts = [];
+	export let posts: GetAllPostsQueryResult = [];
 </script>
 
 <ul class="article-list">
