@@ -37,20 +37,23 @@
 	}
 
 	.article-media {
-		overflow: hidden;
-		border-radius: space-scale.$size-16;
+		clip-path: inset(0 round space-scale.$size-16);
+		transition: clip-path 0.3s ease-in-out;
 
 		.even & {
 			order: 1;
+		}
+
+		.article:is(:hover, :focus-visible) & {
+			clip-path: inset(space-scale.$size-4 round space-scale.$size-24);
 		}
 	}
 
 	.article-image {
 		transition: scale 0.3s ease-in-out;
 
-		.article:hover &,
-		.article:focus-visible & {
-			scale: 1.02;
+		.article:is(:hover, :focus-visible) & {
+			scale: 1.05;
 		}
 	}
 
@@ -66,8 +69,7 @@
 		text-decoration-color: transparent;
 		transition: text-decoration-color 0.3s ease-in-out;
 
-		.article:hover &,
-		.article:focus-visible & {
+		.article:is(:hover, :focus-visible) & {
 			text-decoration-color: color-palette.$curious-blue;
 		}
 	}
