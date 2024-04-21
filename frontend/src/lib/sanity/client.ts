@@ -16,8 +16,9 @@ import type {
 
 export const client = createClient({
 	projectId: PUBLIC_SANITY_PROJECT_ID,
+	apiVersion: "2024-04-01",
 	dataset: "production",
-	useCdn: dev
+	useCdn: !dev
 });
 
 export const getAllPosts = async() => await client.fetch<GetAllPostsQueryResult>(getAllPostsQuery);
