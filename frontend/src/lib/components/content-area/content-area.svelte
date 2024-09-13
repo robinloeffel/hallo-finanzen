@@ -1,5 +1,5 @@
 <main class="content-area">
-	<slot/>
+	<slot />
 </main>
 
 <style lang="scss">

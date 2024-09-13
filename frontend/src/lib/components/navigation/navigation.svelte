@@ -7,7 +7,7 @@
 	let oldScrollY = 0;
 
 	const handleWindowScroll = () => {
-		hidden = window.scrollY > 100 && !(oldScrollY > window.scrollY);
+		hidden = window.scrollY > 100 && oldScrollY <= window.scrollY;
 		oldScrollY = window.scrollY;
 	};
 </script>

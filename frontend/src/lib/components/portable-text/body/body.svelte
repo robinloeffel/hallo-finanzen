@@ -2,7 +2,7 @@
 	import { Image } from "$components/portable-text";
 	import { PortableText, type InputValue, type PortableTextComponents } from "@portabletext/svelte";
 
-	export let value: InputValue | null | undefined;
+	export let value: InputValue | undefined;
 
 	const components: PortableTextComponents = {
 		types: {

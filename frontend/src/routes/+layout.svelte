@@ -22,6 +22,6 @@
 	{/if}
 </svelte:head>
 
-<Navigation pages={navigationItems}/>
-<slot/>
-<Footer {pages}/>
+<Navigation pages={navigationItems} />
+<slot />
+<Footer {pages} />
