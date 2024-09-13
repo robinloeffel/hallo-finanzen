@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { ArticleList, ContentArea } from "$components";
+	import type { PageServerData } from "./$types";
 
-	export let data;
+	export let data: PageServerData;
 
 	const { posts } = data;
 </script>

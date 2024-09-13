@@ -1,5 +1,4 @@
 import { dev } from "$app/environment";
-import { PUBLIC_SANITY_PROJECT_ID } from "$env/static/public";
 import { createClient } from "@sanity/client";
 import {
 	getAllPagesQuery,
@@ -15,7 +14,7 @@ import type {
 } from "./types";
 
 export const client = createClient({
-	projectId: PUBLIC_SANITY_PROJECT_ID,
+	projectId: "iwgytvvq",
 	apiVersion: "2024-04-01",
 	dataset: "production",
 	useCdn: !dev

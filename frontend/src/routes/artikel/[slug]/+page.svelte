@@ -2,8 +2,9 @@
 	import { ContentArea, Richtext } from "$components";
 	import { Body } from "$components/portable-text";
 	import { formatDate, urlFor } from "$sanity";
+	import type { PageServerData } from "./$types";
 
-	export let data;
+	export let data: PageServerData;
 
 	const { post } = data;
 

@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { ContentArea, Richtext } from "$components";
 	import { Body } from "$components/portable-text";
+	import type { PageServerData } from "./$types";
 
-	export let data;
+	export let data: PageServerData;
 
 	$: ({ page } = data);
 </script>

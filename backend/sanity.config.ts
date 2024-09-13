@@ -7,7 +7,7 @@ import { types } from "./schemas";
 export default defineConfig({
 	name: "hallo-finanzen",
 	title: "Hallo Finanzen",
-	projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
+	projectId: "iwgytvvq",
 	dataset: "production",
 	plugins: [
 		structureTool(),

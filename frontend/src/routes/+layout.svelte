@@ -2,8 +2,9 @@
 	import { dev } from "$app/environment";
 	import { Footer, Navigation } from "$components";
 	import "$styles/base.scss";
+	import type { LayoutServerData } from "./$types";
 
-	export let data;
+	export let data: LayoutServerData;
 
 	const { pages } = data;
 
