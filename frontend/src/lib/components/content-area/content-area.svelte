@@ -1,5 +1,17 @@
+<script lang="ts" module>
+	import type { Snippet } from "svelte";
+
+	interface Props {
+		children: Snippet;
+	}
+</script>
+
+<script lang="ts">
+	const { children }: Props = $props();
+</script>
+
 <main class="content-area">
-	<slot></slot>
+	{@render children()}
 </main>
 
 <style lang="scss">

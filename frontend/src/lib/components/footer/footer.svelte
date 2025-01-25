@@ -1,7 +1,13 @@
-<script lang="ts">
+<script lang="ts" module>
 	import type { GetAllPagesQueryResult } from "$sanity/types";
 
-	export let pages: GetAllPagesQueryResult;
+	interface Props {
+		pages: GetAllPagesQueryResult;
+	}
+</script>
+
+<script lang="ts">
+	const { pages }: Props = $props();
 </script>
 
 <footer class="footer">
@@ -12,7 +18,7 @@
 		<li class="sitemap-item">
 			<a href="/artikel">Archiv</a>
 		</li>
-		{#each pages as page}
+		{#each pages as page (page._id)}
 			<li class="sitemap-item">
 				<a href={`/${page.slug?.current}`}>{page.title}</a>
 			</li>

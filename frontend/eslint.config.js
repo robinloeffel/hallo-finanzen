@@ -21,6 +21,8 @@ export default [
 		},
 		rules: {
 			"@typescript-eslint/init-declarations": "off",
+			"unicorn/prevent-abbreviations": "off",
+			"no-underscore-dangle": "off",
 			"svelte/no-dom-manipulating": "error",
 			"svelte/no-dupe-on-directives": "error",
 			"svelte/no-dupe-use-directives": "error",

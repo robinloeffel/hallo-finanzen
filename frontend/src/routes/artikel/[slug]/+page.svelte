@@ -2,21 +2,29 @@
 	import { ContentArea, Richtext } from "$components";
 	import { Body } from "$components/portable-text";
 	import { formatDate, urlFor } from "$sanity";
-	import type { PageServerData } from "./$types";
+	import { derived } from "svelte/store";
+	import type { PageProps } from "./$types";
 
-	export let data: PageServerData;
+	const { data }: PageProps = $props();
+	const post = $derived(data.post);
 
-	const { post } = data;
+	const authorImage = $derived.by(() =>
+		post?.author?.image
+			? urlFor(post.author.image)
+				.size(64, 64)
+				.auto("format")
+				.url()
+			: ""
+	);
 
-	const authorImageUrl = urlFor(post!.author!.image)
-		.size(64, 64)
-		.auto("format")
-		.url();
-
-	const articleImageUrl = urlFor(post!.image)
-		.size(2000, 1333)
-		.auto("format")
-		.url();
+	const articleImage = $derived.by(() =>
+		post?.image
+			? urlFor(post.image)
+				.size(2000, 1333)
+				.auto("format")
+				.url()
+			: ""
+	);
 </script>
 
 <svelte:head>
@@ -30,7 +38,7 @@
 		decoding="async"
 		fetchpriority="high"
 		height="1333"
-		src={articleImageUrl}
+		src={articleImage}
 		width="2000"
 	/>
 </header>
@@ -39,7 +47,13 @@
 	<Richtext>
 		<h1>{post?.title}</h1>
 		<small class="article-meta">
-			<img class="author-image" alt={post?.author?.name} decoding="async" height="30" loading="lazy" src={authorImageUrl} width="30" />
+			<img
+				class="author-image"
+				alt={post?.author?.name}
+				decoding="async"
+				height="30"
+				loading="lazy" src={authorImage} width="30"
+			/>
 			<a href={`/${post?.author?.slug?.current}`}>{post?.author?.name}</a>,
 			<span>{formatDate(post?.publishedAt ?? "")}</span>
 		</small>

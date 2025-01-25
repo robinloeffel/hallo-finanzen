@@ -1,13 +1,20 @@
-<script lang="ts">
-	import { urlFor } from "$sanity";
+<script lang="ts" module>
 	import type { CustomBlockComponentProps } from "@portabletext/svelte";
 
-	export let portableText: CustomBlockComponentProps;
+	interface Props {
+		portableText: CustomBlockComponentProps;
+	}
+</script>
 
-	const source = urlFor(portableText.value)
+<script lang="ts">
+	import { urlFor } from "$sanity";
+
+	const { portableText }: Props = $props();
+	const source = $derived(urlFor(portableText.value)
 		.size(1500, 1000)
 		.auto("format")
-		.url();
+		.url()
+	);
 </script>
 
 <img

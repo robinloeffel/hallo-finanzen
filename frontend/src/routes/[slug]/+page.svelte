@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { ContentArea, Richtext } from "$components";
 	import { Body } from "$components/portable-text";
-	import type { PageServerData } from "./$types";
+	import type { PageProps } from "./$types";
 
-	export let data: PageServerData;
-
-	$: ({ page } = data);
+	const { data }: PageProps = $props();
+	const page = $derived(data.page);
 </script>
 
 <svelte:head>

@@ -1,14 +1,22 @@
-<script lang="ts">
+<script lang="ts" module>
 	import type { GetAllPostsQueryResult } from "$sanity/client";
+
+	interface Props {
+		posts: GetAllPostsQueryResult;
+	}
+</script>
+
+<script lang="ts">
 	import Article from "./article.svelte";
 
-	export let posts: GetAllPostsQueryResult = [];
+	const { posts }: Props = $props();
 </script>
 
 <ul class="article-list">
-	{#each posts as post, index}
+	{#each posts as post, index (post._id)}
+		{@const even = (index + 1) % 2 === 0}
 		<li class="article-list-item">
-			<Article even={(index + 1) % 2 === 0} {post} />
+			<Article {even} {post} />
 		</li>
 	{/each}
 </ul>

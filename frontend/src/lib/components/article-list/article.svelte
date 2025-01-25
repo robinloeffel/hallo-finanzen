@@ -1,19 +1,31 @@
-<script lang="ts">
-	import { formatDate, urlFor } from "$sanity";
+<script lang="ts" module>
 	import type { GetAllPostsQueryResult } from "$sanity/client";
 
-	export let post: GetAllPostsQueryResult[number];
-	export let even: boolean;
+	interface Props {
+		post: GetAllPostsQueryResult[number];
+		even: boolean;
+	}
+</script>
 
-	const imageUrl = urlFor(post.image)
-		.size(1000, 750)
-		.auto("format")
-		.url();
+<script lang="ts">
+	import { formatDate, urlFor } from "$sanity";
+
+	const { post, even }: Props = $props();
+
+	const image = $derived.by(() =>
+		post.image
+			? urlFor(post.image)
+				.size(1000, 750)
+				.auto("format")
+				.url()
+			: ""
+	);
+
 </script>
 
 <a class="article" class:even href={`/artikel/${post.slug?.current}`}>
 	<div class="article-media">
-		<img class="article-image" alt="" decoding="async" height="750" loading="lazy" src={imageUrl} width="1000" />
+		<img class="article-image" alt="" decoding="async" height="750" loading="lazy" src={image} width="1000" />
 	</div>
 	<div class="article-info">
 		<h2 class="article-title">{post.title}</h2>

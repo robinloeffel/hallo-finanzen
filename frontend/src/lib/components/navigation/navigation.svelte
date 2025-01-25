@@ -1,10 +1,16 @@
-<script lang="ts">
+<script lang="ts" module>
 	import type { GetAllPagesQueryResult } from "$sanity/types";
 
-	export let pages: GetAllPagesQueryResult;
+	interface Props {
+		pages: GetAllPagesQueryResult;
+	}
+</script>
 
-	let hidden = false;
-	let oldScrollY = 0;
+<script lang="ts">
+	const { pages }: Props = $props();
+
+	let hidden = $state(false);
+	let oldScrollY = $state(0);
 
 	const handleWindowScroll = () => {
 		hidden = window.scrollY > 100 && oldScrollY <= window.scrollY;
@@ -12,7 +18,7 @@
 	};
 </script>
 
-<svelte:window on:scroll={handleWindowScroll} />
+<svelte:window onscroll={handleWindowScroll} />
 
 <nav class="navigation" class:hidden>
 	<ul class="navigation-list">
@@ -22,7 +28,7 @@
 		<li class="navigation-item">
 			<a class="navigation-link" href="/artikel">Archiv</a>
 		</li>
-		{#each pages as page}
+		{#each pages as page (page._id)}
 			<li class="navigation-item">
 				<a class="navigation-link" href={`/${page.slug?.current}`}>{page.title}</a>
 			</li>
