@@ -58,5 +58,10 @@ export default [
 			"svelte/sort-attributes": "error",
 			"svelte/spaced-html-comment": "error"
 		}
+	},
+	{
+		ignores: [
+			"src/lib/sanity/types.d.ts"
+		]
 	}
 ];

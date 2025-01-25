@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { AllPages } from "$graphql";
+	import type { GetAllPagesQueryResult } from "$sanity/types";
 
-	export let pages: AllPages;
+	export let pages: GetAllPagesQueryResult;
 
 	let hidden = false;
 	let oldScrollY = 0;
@@ -42,9 +42,7 @@
 		width: min(100% - space-scale.$size-64, variables.$content-width + space-scale.$size-64);
 		padding: space-scale.$size-24 space-scale.$size-32;
 		margin: space-scale.$size-32 auto;
-		background-color: color-palette.$black-pearl-80;
-		background-blend-mode: soft-light;
-		backdrop-filter: blur(space-scale.$size-16);
+		background-color: color-palette.$black-pearl;
 		border-radius: space-scale.$size-16;
 		transition: translate 0.4s ease-in-out;
 

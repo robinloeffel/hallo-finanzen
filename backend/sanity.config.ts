@@ -1,6 +1,6 @@
 import { deDELocale } from "@sanity/locale-de-de";
 import { visionTool } from "@sanity/vision";
-import { defineConfig, isProd } from "sanity";
+import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { types } from "./schemas";
 
@@ -12,8 +12,8 @@ export default defineConfig({
 	plugins: [
 		structureTool(),
 		visionTool(),
-		isProd && deDELocale()
-	].filter(Boolean),
+		deDELocale()
+	],
 	schema: {
 		types
 	}

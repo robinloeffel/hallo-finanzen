@@ -9,8 +9,7 @@ export default {
 		alias: {
 			$styles: "./src/lib/styles",
 			$sanity: "./src/lib/sanity",
-			$components: "./src/lib/components",
-			$graphql: "./src/lib/graphql"
+			$components: "./src/lib/components"
 		}
 	}
 };

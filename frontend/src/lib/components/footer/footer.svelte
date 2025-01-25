@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { AllPages } from "$graphql";
+	import type { GetAllPagesQueryResult } from "$sanity/types";
 
-	export let pages: AllPages;
+	export let pages: GetAllPagesQueryResult;
 </script>
 
 <footer class="footer">
@@ -18,7 +18,7 @@
 			</li>
 		{/each}
 	</ul>
-	<small>© Hallo, Finanzen! 2024</small>
+	<small>© Hallo, Finanzen! 2025</small>
 </footer>
 
 <style lang="scss">
