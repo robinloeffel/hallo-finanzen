@@ -8,12 +8,12 @@
 
 	const { post } = data;
 
-	const authorImageUrl = urlFor(post!.author!.image!)
+	const authorImageUrl = urlFor(post!.author!.image)
 		.size(64, 64)
 		.auto("format")
 		.url();
 
-	const articleImageUrl = urlFor(post!.image!)
+	const articleImageUrl = urlFor(post!.image)
 		.size(2000, 1333)
 		.auto("format")
 		.url();
@@ -39,7 +39,7 @@
 	<Richtext>
 		<h1>{post?.title}</h1>
 		<small class="article-meta">
-			<img class="author-image" alt={post?.author?.name} decoding="async" height="30" loading="lazy" src={authorImageUrl} width="30">
+			<img class="author-image" alt={post?.author?.name} decoding="async" height="30" loading="lazy" src={authorImageUrl} width="30" />
 			<a href={`/${post?.author?.slug?.current}`}>{post?.author?.name}</a>,
 			<span>{formatDate(post?.publishedAt ?? "")}</span>
 		</small>

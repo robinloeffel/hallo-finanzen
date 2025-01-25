@@ -23,5 +23,5 @@
 </svelte:head>
 
 <Navigation pages={navigationItems} />
-<slot />
+<slot></slot>
 <Footer {pages} />

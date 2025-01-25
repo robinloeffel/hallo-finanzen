@@ -1,6 +1,5 @@
-import { defineConfig } from "stylelint-define-config";
-
-export default defineConfig({
+/** @type {import('stylelint').Config} */
+export default {
 	extends: "stylelint-config-sweet",
 	rules: {
 		"@stylistic/indentation": "tab",
@@ -8,4 +7,4 @@ export default defineConfig({
 			ignorePseudoClasses: [ "global" ]
 		}]
 	}
-});
+};

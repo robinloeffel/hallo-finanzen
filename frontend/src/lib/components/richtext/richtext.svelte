@@ -1,5 +1,5 @@
 <div class="richtext">
-	<slot />
+	<slot></slot>
 </div>
 
 <style lang="scss">

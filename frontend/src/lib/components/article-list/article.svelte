@@ -5,7 +5,7 @@
 	export let post: GetAllPostsQueryResult[number];
 	export let even: boolean;
 
-	const imageUrl = urlFor(post.image!)
+	const imageUrl = urlFor(post.image)
 		.size(1000, 750)
 		.auto("format")
 		.url();
