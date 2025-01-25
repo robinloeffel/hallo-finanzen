@@ -36,15 +36,19 @@
 <style lang="scss">
 	@use "$styles/color-palette";
 	@use "$styles/space-scale";
+	@use "$styles/media-queries";
 
 	.article {
 		display: grid;
-		grid-template-columns: 5fr 4fr;
 		overflow: clip;
 		text-decoration: none;
 
-		&.even {
-			grid-template-columns: 4fr 5fr;
+		@include media-queries.above-sm {
+			grid-template-columns: 5fr 4fr;
+
+			&.even {
+				grid-template-columns: 4fr 5fr;
+			}
 		}
 	}
 
@@ -52,12 +56,14 @@
 		clip-path: inset(0 round space-scale.$size-16);
 		transition: clip-path 0.3s ease-in-out;
 
-		.even & {
-			order: 1;
-		}
-
 		.article:is(:hover, :focus-visible) & {
 			clip-path: inset(space-scale.$size-4 round space-scale.$size-24);
+		}
+
+		@include media-queries.above-sm {
+			.even & {
+				order: 1;
+			}
 		}
 	}
 
@@ -73,7 +79,11 @@
 		display: grid;
 		gap: space-scale.$size-8;
 		align-self: end;
-		padding: space-scale.$size-24 space-scale.$size-32;
+		padding: space-scale.$size-24;
+
+		@include media-queries.above-sm {
+			padding: space-scale.$size-24 space-scale.$size-32;
+		}
 	}
 
 	.article-title {

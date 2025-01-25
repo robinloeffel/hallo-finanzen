@@ -17,11 +17,12 @@
 }
 
 body {
+	margin-top: space-scale.$size-192;
 	font-family: "Inter Variable", system-ui, sans-serif;
 	font-size: type-scale.$size-20;
 	line-height: 1.6;
 	color: color-palette.$tame-white;
-	text-wrap: balance;
+	text-wrap: pretty;
 	background-color: color-palette.$black-pearl;
 	text-rendering: optimizelegibility;
 }
@@ -37,6 +38,7 @@ h2,
 h3 {
 	hyphens: auto;
 	line-height: 1.2;
+	text-wrap: balance;
 }
 
 ul:not([class]),

@@ -13,7 +13,7 @@
 	.page-hero {
 		display: grid;
 		place-items: center;
-		width: min(100%, variables.$content-width);
+		width: min(100% - space-scale.$size-64, variables.$content-width);
 		margin: space-scale.$size-96 auto space-scale.$size-128;
 	}
 
