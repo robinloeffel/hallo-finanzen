@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { ArticleList, ContentArea } from "$components";
+	import { Articles, ContentArea } from "$components";
 	import type { PageProps } from "./$types";
 
 	const { data }: PageProps = $props();
-	const posts = $derived(data.posts);
+	const articles = $derived(data.posts);
 </script>
 
 <svelte:head>
@@ -11,5 +11,5 @@
 </svelte:head>
 
 <ContentArea>
-	<ArticleList {posts} />
+	<Articles {articles} />
 </ContentArea>

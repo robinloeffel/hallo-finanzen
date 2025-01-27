@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { ArticleList, ContentArea, PageHero } from "$components";
+	import { Articles, ContentArea, PageHero } from "$components";
 	import type { PageProps } from "./$types";
 
 	const { data }: PageProps = $props();
-	const posts = $derived(data.posts);
+	const articles = $derived(data.posts);
 </script>
 
 <svelte:head>
@@ -13,7 +13,5 @@
 <PageHero />
 
 <ContentArea>
-	{#if posts.length > 0}
-		<ArticleList {posts} />
-	{/if}
+	<Articles {articles} />
 </ContentArea>

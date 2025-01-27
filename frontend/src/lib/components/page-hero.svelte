@@ -5,7 +5,6 @@
 </header>
 
 <style lang="scss">
-	@use "$styles/color-palette";
 	@use "$styles/space-scale";
 	@use "$styles/type-scale";
 	@use "$styles/variables";

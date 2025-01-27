@@ -6,7 +6,7 @@
 
 	const { data, children }: LayoutProps = $props();
 	const pages = $derived(data.pages);
-	const navigationItems = $derived.by(() => pages.filter(page => page.inNavigation));
+	const navigationItems = $derived(pages.filter(page => page.inNavigation));
 </script>
 
 <svelte:head>
