@@ -7,9 +7,9 @@ export default {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$styles: "./src/lib/styles",
-			$sanity: "./src/lib/sanity",
-			$components: "./src/lib/components"
+			$components: "./src/lib/components",
+			$cms: "./src/lib/cms",
+			$styles: "./src/lib/styles"
 		}
 	}
 };

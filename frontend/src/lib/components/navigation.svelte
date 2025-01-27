@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import type { GetAllPagesQueryResult } from "$sanity/types";
+	import type { GetAllPagesQueryResult } from "$cms/types";
 
 	interface Props {
 		pages: GetAllPagesQueryResult;
@@ -73,7 +73,7 @@
 	<div class="navigation-expando">
 		<ul class="navigation-list">
 			<li class="navigation-item">
-				<a class="navigation-link" href="/artikel">Archiv</a>
+				<a class="navigation-link" href="/artikel">Alle Artikel</a>
 			</li>
 			{#each pages as page (page._id)}
 				{#if page.slug?.current && page.title}

@@ -3,14 +3,16 @@
 
 	interface Props {
 		children: Snippet;
+		inline?: boolean;
+		blocks?: boolean;
 	}
 </script>
 
 <script lang="ts">
-	const { children }: Props = $props();
+	const { children, inline, blocks }: Props = $props();
 </script>
 
-<main class="content-area">
+<main class="content" class:blocks class:inline>
 	{@render children()}
 </main>
 
@@ -18,8 +20,16 @@
 	@use "$styles/space-scale";
 	@use "$styles/variables";
 
-	.content-area {
+	.content {
 		width: min(100% - space-scale.$size-64, variables.$content-width);
-		margin: space-scale.$size-64 auto space-scale.$size-96;
+		margin: space-scale.$size-192 auto space-scale.$size-96;
+
+		&.inline {
+			margin-top: space-scale.$size-64;
+		}
+
+		&.blocks :global(> * + *) {
+			margin-top: 1em;
+		}
 	}
 </style>

@@ -1,6 +1,6 @@
 export const prerender = true;
 
-import { getAllPages } from "$sanity/client";
+import { getAllPages } from "$cms/client";
 import type { LayoutServerLoad } from "./$types";
 
 export const load: LayoutServerLoad = async () => ({

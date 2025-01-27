@@ -20,6 +20,4 @@
 	};
 </script>
 
-{#if value}
-	<PortableText {components} {value} />
-{/if}
+<PortableText {components} {value} />

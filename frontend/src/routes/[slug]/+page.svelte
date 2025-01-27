@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ContentArea, Richtext } from "$components";
+	import { Content } from "$components";
 	import { Body } from "$components/portable-text";
 	import type { PageProps } from "./$types";
 
@@ -11,8 +11,6 @@
 	<title>{page?.title} &mdash; Hallo, Finanzen!</title>
 </svelte:head>
 
-<ContentArea>
-	<Richtext>
-		<Body value={page?.body} />
-	</Richtext>
-</ContentArea>
+<Content blocks={true}>
+	<Body value={page?.body} />
+</Content>

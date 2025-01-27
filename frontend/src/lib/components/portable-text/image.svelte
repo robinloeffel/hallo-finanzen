@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-	import { urlFor } from "$sanity";
+	import { urlFor } from "$cms";
 
 	const { portableText }: Props = $props();
 	const source = $derived(urlFor(portableText.value)

@@ -1,15 +1,17 @@
 <script lang="ts">
 	import { dev } from "$app/environment";
+	import { page } from "$app/state";
 	import { Footer, Navigation } from "$components";
 	import "$styles/base.scss";
 	import type { LayoutProps } from "./$types";
 
 	const { data, children }: LayoutProps = $props();
 	const pages = $derived(data.pages);
-	const navigationItems = $derived(pages.filter(page => page.inNavigation));
+	const navigationItems = $derived(pages.filter(cmsPage => cmsPage.inNavigation));
 </script>
 
 <svelte:head>
+	<link href={`https://hallo-finanzen.ch${page.url.pathname}`} rel="canonical" />
 	{#if !dev}
 		<script
 			data-domains="hallo-finanzen.ch"

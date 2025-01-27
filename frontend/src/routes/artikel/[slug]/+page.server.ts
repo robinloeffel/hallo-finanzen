@@ -1,4 +1,4 @@
-import { getPostBySlug } from "$sanity/client";
+import { getPostBySlug } from "$cms/client";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ params }) => ({
