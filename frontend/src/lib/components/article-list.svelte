@@ -26,6 +26,7 @@
 	@use "$styles/color-palette";
 	@use "$styles/space-scale";
 	@use "$styles/type-scale";
+	@use "$styles/media-queries";
 
 	.article-list {
 		display: grid;
@@ -41,12 +42,22 @@
 	}
 
 	.article-list-item-title {
+		grid-column: 1 / -1;
 		order: 1;
 		font-size: type-scale.$size-24;
 		text-decoration: underline color-palette.$curious-blue;
+
+		@include media-queries.above-sm {
+			grid-column: 2 / 3;
+		}
 	}
 
 	.article-list-item-date {
+		grid-column: 1 / -1;
 		font-size: type-scale.$size-16;
+
+		@include media-queries.above-sm {
+			grid-column: 1 / 2;
+		}
 	}
 </style>

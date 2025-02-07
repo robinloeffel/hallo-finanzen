@@ -31,6 +31,10 @@
 	@use "$styles/space-scale";
 	@use "$styles/type-scale";
 
+	.post {
+		margin-top: space-scale.$size-192;
+	}
+
 	.post-header {
 		margin-bottom: space-scale.$size-48;
 	}

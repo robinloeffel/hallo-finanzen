@@ -98,12 +98,13 @@
 		width: min(100% - space-scale.$size-64, variables.$content-width / 2);
 		padding: space-scale.$size-32;
 		margin: auto;
-		background-color: color-palette.$dreamless-sleep;
+		background-color: color-palette.$dreamless-sleep-90;
+		backdrop-filter: blur(space-scale.$size-32);
 		border-radius: space-scale.$size-16;
 		transition: translate 0.4s;
 
 		&.hidden {
-			translate: 0 -200%;
+			translate: 0 calc(-100% - space-scale.$size-32);
 		}
 	}
 

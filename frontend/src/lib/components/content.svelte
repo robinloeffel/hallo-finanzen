@@ -22,11 +22,7 @@
 
 	.content {
 		width: min(100% - space-scale.$size-64, variables.$content-width);
-		margin: space-scale.$size-192 auto space-scale.$size-96;
-
-		&.inline {
-			margin-top: space-scale.$size-64;
-		}
+		margin: space-scale.$size-96 auto;
 
 		&.blocks :global(> * + *) {
 			margin-top: 1em;
