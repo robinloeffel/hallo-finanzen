@@ -1,13 +1,11 @@
-<script lang="ts" module>
+<script lang="ts">
+	import { formatDate } from "$cms";
 	import type { GetAllPostsQueryResult } from "$cms/client";
 
 	interface Props {
 		items: GetAllPostsQueryResult;
 	}
-</script>
 
-<script lang="ts">
-	import { formatDate } from "$cms";
 	const { items }: Props = $props();
 </script>
 

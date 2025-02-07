@@ -1,19 +1,14 @@
-<script lang="ts" module>
+<script lang="ts">
 	import menu from "iconoir/icons/menu.svg?raw";
 	import xmark from "iconoir/icons/xmark.svg?raw";
 
-	const map = {
-		menu,
-		xmark
-	} as const;
+	const map = { menu, xmark };
 
 	interface Props {
 		name: keyof typeof map;
 		color?: string;
 	}
-</script>
 
-<script lang="ts">
 	const { name, color }: Props = $props();
 </script>
 

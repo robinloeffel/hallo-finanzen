@@ -1,18 +1,15 @@
-<script lang="ts" module>
+<script lang="ts">
 	import type { Snippet } from "svelte";
 
 	interface Props {
 		children: Snippet;
-		inline?: boolean;
 		blocks?: boolean;
 	}
+
+	const { children, blocks }: Props = $props();
 </script>
 
-<script lang="ts">
-	const { children, inline, blocks }: Props = $props();
-</script>
-
-<main class="content" class:blocks class:inline>
+<main class="content" class:blocks>
 	{@render children()}
 </main>
 

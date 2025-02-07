@@ -1,13 +1,10 @@
-<script lang="ts" module>
+<script lang="ts">
 	import type { GetAllPagesQueryResult } from "$cms/types";
+	import { Icon } from "$components";
 
 	interface Props {
 		pages: GetAllPagesQueryResult;
 	}
-</script>
-
-<script lang="ts">
-	import { Icon } from "$components";
 
 	const { pages }: Props = $props();
 

@@ -1,19 +1,18 @@
-<script lang="ts" module>
+<script lang="ts">
+	import { urlFor } from "$cms";
 	import type { CustomBlockComponentProps } from "@portabletext/svelte";
 
 	interface Props {
 		portableText: CustomBlockComponentProps;
 	}
-</script>
-
-<script lang="ts">
-	import { urlFor } from "$cms";
 
 	const { portableText }: Props = $props();
-	const source = $derived(urlFor(portableText.value)
-		.size(1500, 1000)
-		.auto("format")
-		.url()
+
+	const source = $derived(
+		urlFor(portableText.value)
+			.size(1500, 1000)
+			.auto("format")
+			.url()
 	);
 </script>
 

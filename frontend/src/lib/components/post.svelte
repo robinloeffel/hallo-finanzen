@@ -1,16 +1,12 @@
-<script lang="ts" module>
+<script lang="ts">
+	import { formatDate } from "$cms";
 	import type { GetPostBySlugQueryResult } from "$cms/types";
-	import type { Snippet } from "svelte";
+	import { Body } from "$components/portable-text";
 
 	interface Props {
 		content: GetPostBySlugQueryResult;
-		children?: Snippet;
 	}
-</script>
 
-<script lang="ts">
-	import { formatDate } from "$cms";
-	import { Body } from "$components/portable-text";
 	const { content }: Props = $props();
 </script>
 

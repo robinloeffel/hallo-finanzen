@@ -11,6 +11,6 @@
 </svelte:head>
 
 <Hero />
-<Content inline={true}>
+<Content>
 	<ArticleList {items} />
 </Content>

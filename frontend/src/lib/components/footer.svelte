@@ -1,12 +1,10 @@
-<script lang="ts" module>
+<script lang="ts">
 	import type { GetAllPagesQueryResult } from "$cms/types";
 
 	interface Props {
 		pages: GetAllPagesQueryResult;
 	}
-</script>
 
-<script lang="ts">
 	const { pages }: Props = $props();
 </script>
 

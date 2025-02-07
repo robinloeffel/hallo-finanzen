@@ -1,8 +1,9 @@
 <script lang="ts">
+	import "$styles/base.scss";
+
 	import { dev } from "$app/environment";
 	import { page } from "$app/state";
 	import { Footer, Navigation } from "$components";
-	import "$styles/base.scss";
 	import type { LayoutProps } from "./$types";
 
 	const { data, children }: LayoutProps = $props();
