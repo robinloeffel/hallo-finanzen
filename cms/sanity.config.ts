@@ -5,16 +5,16 @@ import { structureTool } from "sanity/structure";
 import { types } from "./schemas";
 
 export default defineConfig({
-	name: "hallo-finanzen",
-	title: "Hallo Finanzen",
-	projectId: "iwgytvvq",
-	dataset: "production",
-	plugins: [
-		structureTool(),
-		visionTool(),
-		deDELocale()
-	],
-	schema: {
-		types
-	}
+  name: "hallo-finanzen",
+  title: "Hallo Finanzen",
+  projectId: "iwgytvvq",
+  dataset: "production",
+  plugins: [
+    structureTool(),
+    visionTool(),
+    deDELocale()
+  ],
+  schema: {
+    types
+  }
 });

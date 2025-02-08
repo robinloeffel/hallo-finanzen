@@ -1,7 +1,7 @@
-import groq from "groq";
+import { defineQuery } from "groq";
 
-export const getAllPostsQuery = groq`*[_type == "post"]`;
-export const getPostBySlugQuery = groq`*[_type == "post" && slug.current == $slug][0]{ ..., author-> }`;
+export const getAllPostsQuery = defineQuery(`*[_type == "post"]`);
+export const getPostBySlugQuery = defineQuery(`*[_type == "post" && slug.current == $slug][0]{ ..., author-> }`);
 
-export const getAllPagesQuery = groq`*[_type == "page"]`;
-export const getPageBySlugQuery = groq`*[_type == "page" && slug.current == $slug][0]`;
+export const getAllPagesQuery = defineQuery(`*[_type == "page"]`);
+export const getPageBySlugQuery = defineQuery(`*[_type == "page" && slug.current == $slug][0]`);

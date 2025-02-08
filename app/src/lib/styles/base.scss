@@ -4,48 +4,48 @@
 @use "type-scale";
 
 #app {
-	display: contents;
+  display: contents;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	outline-offset: space-scale.$size-8;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline-offset: space-scale.$size-8;
 }
 
 body {
-	font-family: "Inter Variable", system-ui, sans-serif;
-	font-size: type-scale.$size-20;
-	line-height: 1.6;
-	color: color-palette.$tame-white;
-	text-wrap: pretty;
-	background-color: color-palette.$black-pearl;
-	text-rendering: optimizelegibility;
+  font-family: "Inter Variable", system-ui, sans-serif;
+  font-size: type-scale.$size-20;
+  line-height: 1.6;
+  color: color-palette.$tame-white;
+  text-wrap: pretty;
+  background-color: color-palette.$black-pearl;
+  text-rendering: optimizelegibility;
 }
 
 img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
 h2,
 h3 {
-	hyphens: auto;
-	line-height: 1.2;
-	text-wrap: balance;
+  line-height: 1.2;
+  hyphens: auto;
+  text-wrap: balance;
 }
 
 ul:not([class]),
 ol:not([class]) {
-	padding-left: space-scale.$size-16;
+  padding-left: space-scale.$size-16;
 }
 
 a {
-	color: inherit;
-	text-decoration-color: color-palette.$curious-blue;
+  color: inherit;
+  text-decoration-color: color-palette.$curious-blue;
 }

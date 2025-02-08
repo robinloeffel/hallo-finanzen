@@ -1,6 +1,6 @@
 {
-	"extends": [
-		"robins-tsconfig",
-		"./.svelte-kit/tsconfig.json"
-	]
+  "extends": [
+    "robins-tsconfig",
+    "./.svelte-kit/tsconfig.json"
+  ]
 }
