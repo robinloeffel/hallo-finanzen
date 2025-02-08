@@ -1,5 +1,5 @@
 {
-	"name": "@hallo-finanzen/backend",
+	"name": "@hallo-finanzen/cms",
 	"version": "0.0.1",
 	"private": true,
 	"license": "UNLICENSED",
@@ -12,7 +12,7 @@
 		"se:w": "chokidar 'schemas/**/*.ts' -c 'npm run se' --initial",
 		"start": "sanity start",
 		"tg": "sanity typegen generate",
-		"tg:w": "chokidar '../frontend/src/lib/sanity/queries.ts' -c 'npm run tg' --initial",
+		"tg:w": "chokidar '../app/src/lib/sanity/queries.ts' -c 'npm run tg' --initial",
 		"watch": "concurrently npm:*:w"
 	},
 	"dependencies": {
